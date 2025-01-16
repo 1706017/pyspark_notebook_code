@@ -126,4 +126,18 @@ df_csv_with_schema.select(col('Item_Identifier').alias('Item_Id')).display()
 
 
 
+FILTER Transformation on DataFrames
+====================================
+#Case1)  Filter the data with fat content = Regular
+df_csv_with_schema.filter(col('Item_Fat_Content')=='Regular').display()
+
+
+#Case2) Filter the data where the Item type is Soft Drink and Item Weight is less than 10
+
+df_csv_with_schema.filter((col('Item_Type') == 'Soft Drinks') & (col('Item_Weight')<10)).display()
+
+
+
+
+
 
