@@ -22,6 +22,23 @@ display(df1)
 
 df1.printSchema()
 
+
+#Day-02 Code Changes 
+#Date: 16th Jan 2025 
+
+#SELECT Transformation on DataFrame to select only specific columns
+
+### Case1) When directly using the column name with select 
+
+df_csv_with_schema.select('Item_Identifier','Item_Weight','Item_Fat_Content').display()
+
+
+#case 2 ) When using col() method with the select 
+
+df_csv_with_schema.select(col('Item_Identifier'),col('Item_Weight'),col('Item_Fat_Content')).display()
+
+
+
 Output:
 root
  |-- Item_Identifier: string (nullable = true)
