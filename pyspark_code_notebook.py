@@ -137,6 +137,13 @@ df_csv_with_schema.filter(col('Item_Fat_Content')=='Regular').display()
 df_csv_with_schema.filter((col('Item_Type') == 'Soft Drinks') & (col('Item_Weight')<10)).display()
 
 
+#Case3) Fetch the data where location Type is in Tier1 or Tier2 and Outlet size is NULL
+
+df_csv_with_schema.filter( (col('Outlet_Location_Type').isin('Tier 1','Tier 2')) & (col('Outlet_Size').isNull())).display()
+
+          
+
+
 
 
 
