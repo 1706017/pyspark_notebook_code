@@ -180,6 +180,18 @@ df_csv_with_schema.withColumn('Item_Weight',col('Item_Weight').cast(IntegerType(
 
 
 
+""" 
+.sort() Transformation in pyspark
+Basically used to sort the records based on either increasing or decreasing order of the column specified
+==========================================================================================================
+"""
+df_csv_with_schema.sort(col('Item_Weight').desc()).display()
+
+
+
+
+
+
 
 
 
