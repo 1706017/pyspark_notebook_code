@@ -172,6 +172,14 @@ df_csv_with_schema.withColumn('Item_Fat_Content',regexp_replace(col('Item_Fat_Co
                   .withColumn('Item_Fat_Content',regexp_replace(col('Item_Fat_Content'),'Low Fat','Lf')).display()
 
 
+"""cast() Transformation in Pyspark
+========================================
+To change the data type of the column in a dataframe"""
+
+df_csv_with_schema.withColumn('Item_Weight',col('Item_Weight').cast(IntegerType())).printSchema()
+
+
+
 
 
 
