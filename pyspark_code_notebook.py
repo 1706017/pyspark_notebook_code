@@ -203,6 +203,18 @@ df_csv_with_schema.limit(10).display()
 
 
 
+""" 
+.drop() Transformation in pyspark
+Used to simply drop one or multiple columns from a dataframe
+=============================================================
+"""
+df_csv_with_schema.drop('Item_Weight','Item_Type').display()
+
+
+
+
+
+
 
 
 
