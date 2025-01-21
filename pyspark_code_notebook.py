@@ -193,6 +193,19 @@ df_csv_with_schema.sort(['Item_Weight','Item_Visibility'],asceding = [0,0]).disp
 
 
 
+""" 
+.limit() Transformation in pyspark
+It is basically used to limit the records to be displayed of dataframe
+=======================================================================
+"""
+df_csv_with_schema.limit(10).display() 
+#just show 10 records of the dataframe
+
+
+
+
+
+
 
 
 
