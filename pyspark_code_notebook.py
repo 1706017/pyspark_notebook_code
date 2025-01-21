@@ -212,6 +212,21 @@ df_csv_with_schema.drop('Item_Weight','Item_Type').display()
 
 
 
+""" 
+.drop_duplicates() Transformation in pyspark
+============================================
+To delete the duplicate records based on all the columns or based on some specific columns
+===========================================================================================
+"""
+df_csv_with_schema.drop_duplicates().display() #Droping duplicates records based on all the columns
+df_csv_with_schema.drop_duplicates(subset = ['Item_Weight']).display() # to delete the duplicate records based on specific columns
+
+
+
+
+
+
+
 
 
 
