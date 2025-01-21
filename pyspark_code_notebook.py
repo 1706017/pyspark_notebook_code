@@ -187,6 +187,14 @@ Basically used to sort the records based on either increasing or decreasing orde
 """
 df_csv_with_schema.sort(col('Item_Weight').desc()).display()
 
+#Sorting based on multiple columns and both in desceding order
+df_csv_with_schema.sort(['Item_Weight','Item_Visibility'],asceding = [0,0]).display()
+#here 0,0 means false for both the columns for ascending order that means both the columns will be sorted in descending Order 
+
+
+
+
+
 
 
 
