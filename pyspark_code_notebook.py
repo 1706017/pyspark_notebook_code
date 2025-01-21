@@ -141,6 +141,15 @@ df_csv_with_schema.filter((col('Item_Type') == 'Soft Drinks') & (col('Item_Weigh
 
 df_csv_with_schema.filter( (col('Outlet_Location_Type').isin('Tier 1','Tier 2')) & (col('Outlet_Size').isNull())).display()
 
+#withColumnRenamed() Transformation in Pyspark:
+================================================
+from pyspark.sql.types import *
+from pyspark.sql.functions import *
+
+df_csv_with_schema.withColumnRenamed('Item_Weight','Item_Wt').display()
+
+
+
           
 
 
