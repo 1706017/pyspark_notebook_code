@@ -149,6 +149,32 @@ from pyspark.sql.functions import *
 df_csv_with_schema.withColumnRenamed('Item_Weight','Item_Wt').display()
 
 
+          
+""".withColumn() Transformation
+===================================
+It has below use cases:
+Use case 1) To add a new column in data frame having constant value
+
+Use case 2) To add a new column by the help of existing columns of dataframe
+
+Use case 3) To modify an existing column in dataframe """
+
+# To add a new column with constant value
+df_new = df_csv_with_schema.withColumn('Flag_new',lit('new'))
+df_new.display()
+
+
+# To add a new column based on existing columns of dataframe
+df_csv_with_schema.withColumn('Multiply_new_col',col('Item_Weight')*col('Item_MRP')).display()
+
+#To modify the existing column of a dataframe
+df_csv_with_schema.withColumn('Item_Fat_Content',regexp_replace(col('Item_Fat_Content'),'Regular','Reg'))\
+                  .withColumn('Item_Fat_Content',regexp_replace(col('Item_Fat_Content'),'Low Fat','Lf')).display()
+
+
+
+
+
 
           
 
