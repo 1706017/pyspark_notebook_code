@@ -263,6 +263,13 @@ id	name
 3	Kumar
 4	Gaurav
 
+## STRING FUNCTIONS AND Transformation upper(),lower()
+
+df_csv_with_schema.select(upper('Item_Type').alias("Item_Category_upper")).display()
+df_csv_with_schema.select(lower('Item_Type').alias("Item_Category_lower")).display()
+
+
+
 
 
 
