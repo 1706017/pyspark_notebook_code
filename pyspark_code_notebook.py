@@ -224,6 +224,50 @@ df_csv_with_schema.drop_duplicates(subset = ['Item_Weight']).display() # to dele
 
 
 
+"""
+Date: 27th Jan 2025
+Day-03 Code changes
+"""
+data1 = [(1,'Amrit'),(2,'Manash')]
+schema1 = 'id INT,name STRING'
+
+data2 = [(3,'Kumar'),(4,'Gaurav')]
+schema2 = 'id INT,name STRING'
+
+df1 = spark.createDataFrame(data1,schema1)
+
+df2 = spark.createDataFrame(data2,schema2)
+
+df1.display()
+
+df2.display()
+
+OUTPUT:
+======
+
+id	name
+1	Amrit
+2	Manash
+
+id	name
+3	Kumar
+4	Gaurav
+
+df1.union(df2).display()
+
+Output:
+========
+id	name
+1	Amrit
+2	Manash
+3	Kumar
+4	Gaurav
+
+
+
+
+
+
 
 
 
